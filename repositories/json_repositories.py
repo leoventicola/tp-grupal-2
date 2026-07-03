@@ -15,4 +15,8 @@ class JsonRepository:
     def save(self,data) -> None:
         with open(self.file, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4,ensure_ascii=False)
-                      
+    
+    def next_id(self,data : list):
+        if not data:
+            return 1
+        return max(item["id"] for item in data) + 1

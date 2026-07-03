@@ -1,4 +1,4 @@
-[  
+[
     {
         "dni": "36803927",
         "nombre": "Leo",
@@ -7,16 +7,26 @@
         "telefono": "3874156756",
         "obra_social": "MEDICUS2",
         "id": 1,
-        "eliminado": true
+        "eliminado": false
     },
     {
-        "dni": "36803923",
-        "nombre": "Leo2",
-        "apellido": "Venticolis",
+        "dni": "36803999",
+        "nombre": "Leo3",
+        "apellido": "Venticolista",
         "edad": 30,
-        "telefono": "3874156751",
+        "telefono": "38741567521",
         "obra_social": "OMINT",
-        "id": 1,
+        "id": 2, 
+        "eliminado": false
+    },
+    {
+        "dni": "36803999",
+        "nombre": "nayara",
+        "apellido": "Tejeda",
+        "edad": 1,
+        "telefono": "1144556677",
+        "obra_social": "OMINT",
+        "id": 3,
         "eliminado": false
     }
 ]
