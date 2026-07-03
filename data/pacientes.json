@@ -1,0 +1,22 @@
+[  
+    {
+        "dni": "36803927",
+        "nombre": "Leo",
+        "apellido": "Venticola",
+        "edad": 30,
+        "telefono": "3874156756",
+        "obra_social": "MEDICUS2",
+        "id": 1,
+        "eliminado": true
+    },
+    {
+        "dni": "36803923",
+        "nombre": "Leo2",
+        "apellido": "Venticolis",
+        "edad": 30,
+        "telefono": "3874156751",
+        "obra_social": "OMINT",
+        "id": 1,
+        "eliminado": false
+    }
+]
