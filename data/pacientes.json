@@ -16,8 +16,8 @@
         "edad": 30,
         "telefono": "38741567521",
         "obra_social": "OMINT",
-        "id": 2, 
-        "eliminado": false
+        "id": 2,
+        "eliminado": true
     },
     {
         "dni": "36803999",
@@ -27,6 +27,16 @@
         "telefono": "1144556677",
         "obra_social": "OMINT",
         "id": 3,
+        "eliminado": false
+    },
+    {
+        "dni": "33333333",
+        "nombre": "lelo",
+        "apellido": "lamas",
+        "edad": 23,
+        "telefono": "3875678923",
+        "obra_social": "OMIT",
+        "id": 4,
         "eliminado": false
     }
 ]

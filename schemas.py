@@ -22,7 +22,6 @@ class PacienteUpdate(BaseModel):
 
 class PacienteResponse(PacienteBase):
     id            : int
-    eliminado     : bool
 
 class MedicoBase(BaseModel):
     matricula     : str

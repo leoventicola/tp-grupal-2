@@ -1,0 +1,26 @@
+from schemas import MedicoCreate, MedicoUpdate
+from pathlib import Path
+from repositories.json_repositories import JsonRepository
+
+repo = JsonRepository(Path(__file__).parent.parent / "data" / "medicos.json")
+
+def index():
+    medicos = repo.get_all()
+    return medicos
+
+def create(medico : MedicoCreate):
+    medicos = repo.get_all()
+    siguiente_id = repo.next_id(medicos)
+    nuevo = medico.model_dump()
+    nuevo["id"] = siguiente_id
+    nuevo["eliminado"] = False
+    medicos.append(nuevo)
+    repo.save(medicos)
+    return nuevo
+
+def get(id : int):
+    medicos = repo.get_all()
+    for item in medicos:
+        if item["id"] == id and not item["eliminado"]:
+            return item
+    return None 

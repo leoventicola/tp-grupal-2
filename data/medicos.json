@@ -1,1 +1,47 @@
-[]
+[
+    {
+        "matricula": "12345",
+        "nombre": "Nick",
+        "apellido": "Riviera",
+        "especialidad": "cirujano",
+        "telefono": "119475656",
+        "id": 1,
+        "eliminado": false
+    },
+    {
+        "matricula": "1234567",
+        "nombre": "DR",
+        "apellido": "Hibbert2",
+        "especialidad": "cirujano",
+        "telefono": "123456789",
+        "id": 2,
+        "eliminado": true
+    },
+    {
+        "matricula": "1234567",
+        "nombre": "DR",
+        "apellido": "Hibbert",
+        "especialidad": "cirujano",
+        "telefono": "123456789",
+        "id": 3,
+        "eliminado": false
+    },
+    {
+        "matricula": "1234567",
+        "nombre": "DR",
+        "apellido": "Hibbert",
+        "especialidad": "cirujano",
+        "telefono": "123456789",
+        "id": 4,
+        "eliminado": false
+    },
+    {
+        "matricula": "1234567",
+        "nombre": "DR",
+        "apellido": "Hibbert",
+        "especialidad": "cirujano",
+        "telefono": "123456789",
+        "id": 5,
+        "eliminado": false
+    }
+]
