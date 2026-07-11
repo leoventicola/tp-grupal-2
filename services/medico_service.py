@@ -6,7 +6,7 @@ repo = JsonRepository(Path(__file__).parent.parent / "data" / "medicos.json")
 
 def index():
     medicos = repo.get_all()
-    return medicos
+    return [m for m in medicos if not m["eliminado"]]
 
 def create(medico : MedicoCreate):
     medicos = repo.get_all()
@@ -23,4 +23,14 @@ def get(id : int):
     for item in medicos:
         if item["id"] == id and not item["eliminado"]:
             return item
-    return None 
+    return None
+
+def delete(id : int):
+    medicos = repo.get_all()
+    for item in medicos:
+        if item["id"] == id and not item["eliminado"]:
+            item["eliminado"] = True
+            repo.save(medicos)
+            return True
+    return False
+    
