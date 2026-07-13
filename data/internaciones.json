@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "paciente_id": 1,
+        "medico_id": 3,
+        "fecha_ingreso": "hoy",
+        "diagnostico": "Enfermo",
+        "habitacion": "1A",
+        "estado": "enfermo",
+        "id": 1,
+        "eliminado": false
+    },
+    {
+        "paciente_id": 3,
+        "medico_id": 3,
+        "fecha_ingreso": "2026-07-13T19:02:23.639Z",
+        "diagnostico": "Enfermo",
+        "habitacion": "7A",
+        "estado": "enfermo",
+        "id": 2,
+        "eliminado": false
+    }
+]

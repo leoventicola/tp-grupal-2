@@ -47,7 +47,7 @@ class MedicoResponse(MedicoBase):
 class InternacionBase(BaseModel):
     paciente_id   : int
     medico_id     : int
-    fecha_ingreso : datetime
+    fecha_ingreso : str
     diagnostico   : str
     habitacion    : str
     estado        : str
@@ -56,9 +56,8 @@ class InternacionCreate(InternacionBase):
     pass
 
 class InternacionUpdate(BaseModel):
-    paciente_id   : int | None = None
     medico_id     : int | None = None
-    fecha_ingreso : datetime | None = None
+    fecha_ingreso : str | None = None
     diagnostico   : str | None = None
     habitacion    : str | None = None
     estado        : str | None = None
