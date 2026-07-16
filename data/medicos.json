@@ -18,11 +18,11 @@
         "eliminado": true
     },
     {
-        "matricula": "1234567",
-        "nombre": "DR",
-        "apellido": "Hibbert",
-        "especialidad": "cirujano",
-        "telefono": "123456789",
+        "matricula": "12344",
+        "nombre": "alberto",
+        "apellido": "martinez",
+        "especialidad": "ojos",
+        "telefono": "3873344",
         "id": 3,
         "eliminado": false
     },
@@ -43,5 +43,14 @@
         "telefono": "123456789",
         "id": 5,
         "eliminado": false
+    },
+    {
+        "matricula": "32435",
+        "nombre": "gus",
+        "apellido": "semp",
+        "especialidad": "manos",
+        "telefono": "33423",
+        "id": 6,
+        "eliminado": true
     }
 ]

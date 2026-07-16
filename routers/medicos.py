@@ -30,3 +30,15 @@ def delete(id : int):
     eliminado = medico_service.delete(id)
     if not eliminado:
         raise HTTPException(status_code = 404, detail="Medico no encontrado")
+
+@router.put("/{id}", response_model=MedicoResponse)
+def update(id: int, medico: MedicoUpdate):
+    actualizado = medico_service.update(id, medico)
+
+    if not actualizado:
+        raise HTTPException(
+            status_code=404,
+            detail="Medico no encontrado"
+        )
+
+    return actualizado

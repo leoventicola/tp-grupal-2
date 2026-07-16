@@ -38,5 +38,45 @@
         "obra_social": "OMIT",
         "id": 4,
         "eliminado": false
+    },
+    {
+        "dni": "42078636",
+        "nombre": "gus",
+        "apellido": "martinez",
+        "edad": 27,
+        "telefono": "3873334343",
+        "obra_social": "prog",
+        "id": 5,
+        "eliminado": true
+    },
+    {
+        "dni": "4343⅗3434",
+        "nombre": "gus",
+        "apellido": "mart",
+        "edad": 34,
+        "telefono": "4354535",
+        "obra_social": "prof",
+        "id": 6,
+        "eliminado": true
+    },
+    {
+        "dni": "4264574",
+        "nombre": "fhdfhd",
+        "apellido": "3534fghdf",
+        "edad": 45,
+        "telefono": "3443675634",
+        "obra_social": "ptog",
+        "id": 7,
+        "eliminado": true
+    },
+    {
+        "dni": "3422435",
+        "nombre": "guds",
+        "apellido": "rtggr",
+        "edad": 34,
+        "telefono": "43422455234",
+        "obra_social": "prog",
+        "id": 8,
+        "eliminado": true
     }
 ]

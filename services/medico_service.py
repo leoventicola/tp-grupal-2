@@ -34,3 +34,18 @@ def delete(id : int):
             return True
     return False
     
+def update(id: int, medico: MedicoUpdate):
+    medicos = repo.get_all()
+
+    for item in medicos:
+        if item["id"] == id and not item["eliminado"]:
+
+            datos = medico.model_dump(exclude_none=True)
+
+            for campo, valor in datos.items():
+                item[campo] = valor
+
+            repo.save(medicos)
+            return item
+
+    return None

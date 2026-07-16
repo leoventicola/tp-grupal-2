@@ -19,7 +19,7 @@ def index():
 def create(paciente : PacienteCreate):
     return paciente_service.create(paciente)
 
-@router.patch("/{id}" ,response_model = PacienteResponse)
+@router.put("/{id}" ,response_model = PacienteResponse)
 def update(id : int, paciente : PacienteUpdate):
     return paciente_service.update(id, paciente)
 
