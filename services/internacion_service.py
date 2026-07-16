@@ -19,33 +19,37 @@ def create(internacion : InternacionCreate):
     siguiente_id = repoInternacion.next_id(internaciones)
     nuevo = internacion.model_dump()
 
-    if(not validPaciente(nuevo["paciente_id"])):
-        return None
+    ok, msg = validPaciente(nuevo["paciente_id"])
+    if not ok:
+        return None, msg
     
-    if(not validMedico(nuevo["medico_id"])):
-        return None
+    ok, msg = validMedico(nuevo["medico_id"])
+    if not ok:
+        return None, msg
     
-    if(not validNuevaInternacion(nuevo["paciente_id"])):
-        return None
+    ok, msg = validNuevaInternacion(nuevo["paciente_id"])
+    if not ok:
+        return None, msg
 
     nuevo["id"] = siguiente_id
     nuevo["eliminado"] = False
     internaciones.append(nuevo)
     repoInternacion.save(internaciones)
 
-    return nuevo
+    return nuevo, ""
 
 def update(id : int ,internacion : InternacionUpdate):
     internaciones = repoInternacion.get_all()
     for item in internaciones:
         if item["id"] == id and not item["eliminado"]:
             datos = internacion.model_dump(exclude_unset = True)
-            if(not validMedico(datos["medico_id"])):
-                return None
+            ok, msg = validMedico(datos["medico_id"])
+            if not ok:
+                return None, msg
             item.update(datos)
             repoInternacion.save(internaciones)
-            return item
-    return None
+            return item, ""
+    return None, "Internacion no encontrada"
 
 def delete(id : int):
     internaciones = repoInternacion.get_all()
@@ -60,21 +64,21 @@ def validPaciente(id):
     pacientes = repoPaciente.get_all()
     for item in pacientes:
         if item["id"] == id and not item["eliminado"]:
-            return True
-    return False
+            return True, ""
+    return False, "Paciente no encontrado o eliminado"
 
 def validMedico(id):
     medicos = repoMedico.get_all()
     for item in medicos:
         if item["id"] == id and not item["eliminado"]:
-            return True
-    return False
+            return True, ""
+    return False, "Medico no encontrado o eliminado"
 
 def validNuevaInternacion(paciente_id):
     internaciones = repoInternacion.get_all()
     for item in internaciones:
         if item["paciente_id"] == paciente_id and not item["eliminado"]:
-            return False
-    return True
+            return False, "El paciente ya se encuentra internado"
+    return True, ""
 
     

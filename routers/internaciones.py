@@ -17,14 +17,17 @@ def index():
 
 @router.post("/", response_model = InternacionResponse)
 def create(internacion : InternacionCreate):
-    nueva_internacion =  internacion_service.create(internacion)
-    if not nueva_internacion:
-        raise HTTPException(status_code = 404, detail="Error: Valide que exista el medico y el paciente. Y el paciente no debe estar internado.")
-    return nueva_internacion    
+    resultado, mensaje = internacion_service.create(internacion)
+    if not resultado:
+        raise HTTPException(status_code = 404, detail=mensaje)
+    return resultado    
 
 @router.patch("/{id}", response_model = InternacionResponse)
 def update(id : int, internacion : InternacionUpdate):
-    return internacion_service.update(id, internacion)
+    resultado, mensaje = internacion_service.update(id, internacion)
+    if not resultado:
+        raise HTTPException(status_code = 404, detail=mensaje)
+    return resultado
 
 @router.delete("/{id}",status_code=204)
 def delete(id : int):

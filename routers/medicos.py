@@ -25,6 +25,13 @@ def get(id : int):
         raise HTTPException(status_code = 404, detail="Medico no encontrado")
     return medico
 
+@router.patch("/{id}" ,response_model = MedicoResponse)
+def update(id : int, medico : MedicoUpdate):
+    medico = medico_service.update(id, medico)
+    if not medico:
+        raise HTTPException(status_code = 404, detail="Medico no encontrado")
+    return medico
+
 @router.delete("/{id}", status_code = 204)
 def delete(id : int):
     eliminado = medico_service.delete(id)
