@@ -7,8 +7,12 @@ from schemas import (
 )
 
 from services import paciente_service
+from auth import verify_token
 
-router = APIRouter(prefix="/pacientes")
+router = APIRouter(
+    prefix="/pacientes",
+    dependencies=[Depends(verify_token)]
+)
 
 @router.get("/", response_model = list[PacienteResponse])
 def index():
@@ -21,11 +25,21 @@ def create(paciente : PacienteCreate):
 
 @router.put("/{id}" ,response_model = PacienteResponse)
 def update(id : int, paciente : PacienteUpdate):
-    return paciente_service.update(id, paciente)
+    actualizado = paciente_service.update(id, paciente)
+    if not actualizado:
+        raise HTTPException(
+            status_code = 404,
+            detail="Paciente no encontrado")
+    return actualizado
 
 @router.get("/{id}", response_model = PacienteResponse)
 def get(id : int):
-    return paciente_service.get(id)
+    paciente = paciente_service.get(id)
+    if not paciente:
+        raise HTTPException(
+            status_code = 404,
+            detail="Paciente no encontrado")
+    return paciente
 
 @router.delete("/{id}", status_code = 204)
 def delete(id : int):

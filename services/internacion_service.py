@@ -11,14 +11,9 @@ def index():
     return [i for i in internaciones if not i["eliminado"]]
 
 def create(internacion : InternacionCreate):
-
-    medicos = repoMedico.get_all()
-    pacientes = repoPaciente.get_all()
     internaciones = repoInternacion.get_all()
-
     siguiente_id = repoInternacion.next_id(internaciones)
     nuevo = internacion.model_dump()
-
     ok, msg = validPaciente(nuevo["paciente_id"])
     if not ok:
         return None, msg
@@ -35,7 +30,6 @@ def create(internacion : InternacionCreate):
     nuevo["eliminado"] = False
     internaciones.append(nuevo)
     repoInternacion.save(internaciones)
-
     return nuevo, ""
 
 def update(id : int ,internacion : InternacionUpdate):
@@ -43,12 +37,16 @@ def update(id : int ,internacion : InternacionUpdate):
     for item in internaciones:
         if item["id"] == id and not item["eliminado"]:
             datos = internacion.model_dump(exclude_unset = True)
-            ok, msg = validMedico(datos["medico_id"])
-            if not ok:
-                return None, msg
+            if "medico_id" in datos:
+                ok, msg = validMedico(datos["medico_id"])
+                if not ok:
+                    return None, msg
+            
             item.update(datos)
             repoInternacion.save(internaciones)
+
             return item, ""
+        
     return None, "Internacion no encontrada"
 
 def delete(id : int):

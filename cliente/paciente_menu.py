@@ -1,4 +1,6 @@
 import requests
+from config import BASE_URL, HEADERS
+from logs import registrar_log
 
 #Menu de pacientes
 def menu_pacientes():
@@ -35,10 +37,11 @@ def menu_pacientes():
             case _:
                 print("Opción inválida")
 
+
 #=============alta paciente ====================================1
 def alta_paciente():
     try:
-        url = "http://127.0.0.1:8000/pacientes"
+        url = f"{BASE_URL}/pacientes/"
 
         paciente = {
             "dni": input("DNI: "),
@@ -48,15 +51,17 @@ def alta_paciente():
             "telefono": input("Teléfono: "),
             "obra_social": input("Obra social: ")
         }
-        respuesta = requests.post(url, json=paciente)
+        respuesta = requests.post(url, json=paciente , headers=HEADERS)
 
-        if respuesta.status_code == 200 or respuesta.status_code == 201:
+        if respuesta.status_code in [200, 201]:
             print("Paciente creado correctamente")
+            registrar_log("Paciente creado correctamente")
             print(respuesta.json())
+
 
         else:
             print("Error al crear paciente")
-            print(respuesta.json())
+            print(respuesta.text)
 
     except ValueError:
         print("La edad debe ser un número.")
@@ -67,14 +72,14 @@ def alta_paciente():
 
 #=============buscar paciente ====================================2
 def buscar_paciente():
-    id_paciente = input("Ingrese ID del paciente: ")
-
     try:
-        url = f"http://127.0.0.1:8000/pacientes/{id_paciente}"
+        id_paciente = input("Ingrese ID del paciente: ")
+        url = f"{BASE_URL}/pacientes/{id_paciente}"
 
-        respuesta = requests.get(url)
+        respuesta = requests.get(url , headers=HEADERS)
 
         if respuesta.status_code == 200:
+            registrar_log("Paciente encontrado correctamente")
             paciente = respuesta.json()
 
             print("\nPaciente encontrado:")
@@ -94,7 +99,7 @@ def modificar_paciente():
     try:
         id_paciente = input("Ingrese ID del paciente a modificar: ")
 
-        url = f"http://127.0.0.1:8000/pacientes/{id_paciente}"
+        url = f"{BASE_URL}/pacientes/{id_paciente}"
 
         paciente = {
             "dni": input("Nuevo DNI: "),
@@ -105,15 +110,16 @@ def modificar_paciente():
             "obra_social": input("Nueva obra social: ")
         }
 
-        respuesta = requests.put(url, json=paciente)
+        respuesta = requests.put(url, json=paciente, headers=HEADERS)
 
         if respuesta.status_code == 200:
             print("Paciente modificado correctamente")
+            registrar_log("Paciente modificado correctamente")
             print(respuesta.json())
 
         else:
             print("Error al modificar paciente")
-            print(respuesta.json())
+            print(respuesta.text)
 
     except ValueError:
         print("La edad debe ser un número.")
@@ -127,17 +133,18 @@ def eliminar_paciente():
     try:
         id_paciente = input("Ingrese ID del paciente a eliminar: ")
 
-        url = f"http://127.0.0.1:8000/pacientes/{id_paciente}"
+        url = f"{BASE_URL}/pacientes/{id_paciente}"
 
-        respuesta = requests.delete(url)
+        respuesta = requests.delete(url , headers=HEADERS)
 
-        if respuesta.status_code == 200 or respuesta.status_code == 204:
+        if respuesta.status_code == 204:
             print("Paciente eliminado correctamente")
+            registrar_log("Paciente eliminado correctamente")
     
 
         else:
             print("Error al eliminar paciente")
-            print(respuesta.text())
+            print(respuesta.text)
 
     except Exception as error:
         print(f"Ocurrió un error: {error}")
@@ -146,11 +153,12 @@ def eliminar_paciente():
 #=============listar pacientes ====================================5
 def listar_pacientes():
     try:
-        url = "http://127.0.0.1:8000/pacientes"
+        url = f"{BASE_URL}/pacientes/"
 
-        respuesta = requests.get(url)
+        respuesta = requests.get(url, headers=HEADERS)
 
         if respuesta.status_code == 200:
+            registrar_log("Pacientes listados correctamente")
             pacientes = respuesta.json()
 
             for paciente in pacientes:
@@ -160,7 +168,7 @@ def listar_pacientes():
                 print(f"DNI: {paciente['dni']}")
                 print(f"Edad: {paciente['edad']}")
         else:
-            print("Error al obtener pacientes.")
+            print(f"Error {respuesta.status_code}: {respuesta.text}")
 
     except Exception as error:
         print(f"Ocurrió un error: {error}")

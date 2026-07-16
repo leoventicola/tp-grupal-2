@@ -78,5 +78,15 @@
         "obra_social": "prog",
         "id": 8,
         "eliminado": true
+    },
+    {
+        "dni": "42078636",
+        "nombre": "gus",
+        "apellido": "marti",
+        "edad": 44,
+        "telefono": "23447382",
+        "obra_social": "prog",
+        "id": 9,
+        "eliminado": true
     }
 ]

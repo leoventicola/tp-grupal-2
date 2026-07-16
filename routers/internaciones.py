@@ -7,8 +7,12 @@ from schemas import (
 )
 
 from services import internacion_service
+from auth import verify_token
 
-router = APIRouter(prefix="/internaciones")
+router = APIRouter(
+    prefix="/internaciones",
+    dependencies=[Depends(verify_token)]
+)
 
 @router.get("/", response_model = list[InternacionResponse])
 def index():
@@ -19,10 +23,10 @@ def index():
 def create(internacion : InternacionCreate):
     resultado, mensaje = internacion_service.create(internacion)
     if not resultado:
-        raise HTTPException(status_code = 404, detail=mensaje)
+        raise HTTPException(status_code = 400, detail=mensaje)
     return resultado    
 
-@router.patch("/{id}", response_model = InternacionResponse)
+@router.put("/{id}", response_model = InternacionResponse)
 def update(id : int, internacion : InternacionUpdate):
     resultado, mensaje = internacion_service.update(id, internacion)
     if not resultado:
@@ -34,3 +38,15 @@ def delete(id : int):
     eliminado = internacion_service.delete(id)
     if not eliminado:
         raise HTTPException(status_code = 404, detail="Internacion no encontrada")
+
+@router.get("/{id}", response_model=InternacionResponse)
+def get(id: int):
+    internacion = internacion_service.get(id)
+
+    if not internacion:
+        raise HTTPException(
+            status_code=404,
+            detail="Internacion no encontrada"
+        )
+
+    return internacion

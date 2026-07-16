@@ -1,6 +1,6 @@
 from paciente_menu import menu_pacientes
 from medicos_menu import menu_medicos
-# from internaciones import menu_internaciones
+from internaciones_menu import menu_internaciones
 
 
 def menu_principal():
@@ -23,8 +23,7 @@ def menu_principal():
                 menu_medicos()
 
             case "3":
-                print("Módulo de internaciones en desarrollo.")
-                # menu_internaciones()
+                menu_internaciones()
 
             case "4":
                 print("Saliendo del sistema...")

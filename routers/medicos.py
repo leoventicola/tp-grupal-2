@@ -7,8 +7,13 @@ from schemas import(
 )
 
 from services import medico_service
+from auth import verify_token
 
-router = APIRouter(prefix="/medicos")
+
+router = APIRouter(
+    prefix="/medicos",
+    dependencies=[Depends(verify_token)]
+    )
 
 @router.get("/", response_model = list[MedicoResponse])
 def index():
@@ -21,13 +26,6 @@ def create(medico : MedicoCreate):
 @router.get("/{id}", response_model = MedicoResponse)
 def get(id : int):
     medico = medico_service.get(id)
-    if not medico:
-        raise HTTPException(status_code = 404, detail="Medico no encontrado")
-    return medico
-
-@router.patch("/{id}" ,response_model = MedicoResponse)
-def update(id : int, medico : MedicoUpdate):
-    medico = medico_service.update(id, medico)
     if not medico:
         raise HTTPException(status_code = 404, detail="Medico no encontrado")
     return medico

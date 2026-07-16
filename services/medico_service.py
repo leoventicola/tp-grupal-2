@@ -25,16 +25,6 @@ def get(id : int):
             return item
     return None
 
-def update(id : int, medico : MedicoUpdate):
-    medicos = repo.get_all()
-    for item in medicos:
-        if item["id"] == id and not item["eliminado"]:
-            datos = medico.model_dump(exclude_unset = True)
-            item.update(datos)
-            repo.save(medicos)
-            return item
-    return None
-
 def delete(id : int):
     medicos = repo.get_all()
     for item in medicos:
@@ -50,7 +40,7 @@ def update(id: int, medico: MedicoUpdate):
     for item in medicos:
         if item["id"] == id and not item["eliminado"]:
 
-            datos = medico.model_dump(exclude_none=True)
+            datos = medico.model_dump(exclude_unset=True)
 
             for campo, valor in datos.items():
                 item[campo] = valor

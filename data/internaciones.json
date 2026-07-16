@@ -18,5 +18,15 @@
         "estado": "enfermo",
         "id": 2,
         "eliminado": false
+    },
+    {
+        "paciente_id": 4,
+        "medico_id": 4,
+        "fecha_ingreso": "33/7",
+        "diagnostico": "nada",
+        "habitacion": "0",
+        "estado": "de10",
+        "id": 3,
+        "eliminado": false
     }
 ]

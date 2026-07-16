@@ -1,5 +1,6 @@
 import requests
-
+from config import BASE_URL, HEADERS
+from logs import registrar_log
 
 def menu_medicos():
 
@@ -44,7 +45,7 @@ def menu_medicos():
 # =======alta medico========1
 def alta_medico():
     try:
-        url = "http://127.0.0.1:8000/medicos"
+        url = f"{BASE_URL}/medicos/"
 
         medico = {
             "matricula": input("Matrícula: "),
@@ -54,10 +55,11 @@ def alta_medico():
             "telefono": input("Teléfono: ")
         }
 
-        respuesta = requests.post(url, json=medico)
+        respuesta = requests.post(url, json=medico, headers=HEADERS)
 
-        if respuesta.status_code == 200 or respuesta.status_code == 201:
+        if respuesta.status_code in [200, 201]:
             print("Médico creado correctamente")
+            registrar_log("Médico creado correctamente")
             print(respuesta.json())
 
         else:
@@ -72,11 +74,12 @@ def buscar_medico():
     try:
         id_medico = input("Ingrese ID del médico: ")
 
-        url = f"http://127.0.0.1:8000/medicos/{id_medico}"
+        url = f"{BASE_URL}/medicos/{id_medico}"
 
-        respuesta = requests.get(url)
+        respuesta = requests.get(url , headers=HEADERS)
 
         if respuesta.status_code == 200:
+            registrar_log("Médico encontrado correctamente")
             medico = respuesta.json()
 
             print("----------------")
@@ -98,7 +101,7 @@ def modificar_medico():
     try:
         id_medico = input("ID del médico a modificar: ")
 
-        url = f"http://127.0.0.1:8000/medicos/{id_medico}"
+        url = f"{BASE_URL}/medicos/{id_medico}"
 
         medico = {
             "matricula": input("Nueva matrícula: "),
@@ -108,10 +111,11 @@ def modificar_medico():
             "telefono": input("Nuevo teléfono: ")
         }
 
-        respuesta = requests.put(url, json=medico)
+        respuesta = requests.put(url, json=medico, headers=HEADERS)
 
         if respuesta.status_code == 200:
             print("Médico modificado correctamente")
+            registrar_log("Médico modificado correctamente")
             print(respuesta.json())
 
         else:
@@ -126,12 +130,13 @@ def eliminar_medico():
     try:
         id_medico = input("Ingrese ID del médico a eliminar: ")
 
-        url = f"http://127.0.0.1:8000/medicos/{id_medico}"
+        url = f"{BASE_URL}/medicos/{id_medico}"
 
-        respuesta = requests.delete(url)
+        respuesta = requests.delete(url , headers=HEADERS)
 
-        if respuesta.status_code == 204:
+        if respuesta.status_code in [200, 204]:
             print("Médico eliminado correctamente")
+            registrar_log("Médico eliminado correctamente")
 
         else:
             print("Error al eliminar médico")
@@ -144,13 +149,12 @@ def eliminar_medico():
 #========listar medicos========5
 def listar_medicos():
     try:
-        url = "http://127.0.0.1:8000/medicos"
-
-        respuesta = requests.get(url)
+        url = f"{BASE_URL}/medicos/"
+        respuesta = requests.get(url, headers=HEADERS)
 
         if respuesta.status_code == 200:
+            registrar_log("Médicos listados correctamente")
             medicos = respuesta.json()
-
             if len(medicos) == 0:
                 print("No hay médicos registrados")
             else:
@@ -162,10 +166,8 @@ def listar_medicos():
                     print(f"Apellido: {medico['apellido']}")
                     print(f"Especialidad: {medico['especialidad']}")
                     print(f"Teléfono: {medico['telefono']}")
-
         else:
             print("Error al listar médicos")
             print(respuesta.text)
-
     except Exception as error:
         print(f"Ocurrió un error: {error}")
