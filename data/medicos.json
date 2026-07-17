@@ -52,5 +52,23 @@
         "telefono": "33423",
         "id": 6,
         "eliminado": true
+    },
+    {
+        "matricula": "44543456",
+        "nombre": "javier",
+        "apellido": "solis",
+        "especialidad": "cirujano",
+        "telefono": "23495495",
+        "id": 7,
+        "eliminado": true
+    },
+    {
+        "matricula": "s43435435",
+        "nombre": "gus",
+        "apellido": "marrr",
+        "especialidad": "dientes",
+        "telefono": "23423423",
+        "id": 8,
+        "eliminado": true
     }
 ]

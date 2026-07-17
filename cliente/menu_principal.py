@@ -1,12 +1,12 @@
 from paciente_menu import menu_pacientes
 from medicos_menu import menu_medicos
 from internaciones_menu import menu_internaciones
-
+from utilidades import limpiar, pausar
 
 def menu_principal():
     while True:
-        print("\n========================")
-        print(" SISTEMA HOSPITALARIO")
+        limpiar()
+        print("SISTEMA HOSPITALARIO")
         print("========================")
         print("1 - Gestionar pacientes")
         print("2 - Gestionar médicos")
@@ -14,7 +14,6 @@ def menu_principal():
         print("4 - Salir")
 
         opcion = input("\nSeleccione una opción: ")
-
         match opcion:
             case "1":
                 menu_pacientes()
@@ -31,7 +30,7 @@ def menu_principal():
 
             case _:
                 print("Opción inválida. Intente nuevamente.")
-
+                pausar()
 
 if __name__ == "__main__":
     menu_principal()

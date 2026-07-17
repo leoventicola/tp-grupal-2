@@ -1,0 +1,90 @@
+Fecha: 2026-07-17 11:39:31.294743 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:39:38.330163 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:39:39.512982 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:39:40.220738 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:40:37.484919 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:40:38.959907 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:43:55.300633 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:44:41.438314 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:47:00.855329 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:48:44.246551 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 11:49:36.225158 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:10:37.547712 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:10:52.297919 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente
+Fecha: 2026-07-17 12:11:38.074058 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente
+Fecha: 2026-07-17 12:13:03.952459 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente
+Fecha: 2026-07-17 12:13:52.452841 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente
+Fecha: 2026-07-17 12:22:52.185667 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:23:15.608240 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:23:48.936267 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:24:09.177037 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:25:53.635732 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:30:34.603043 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:53:50.480709 | Usuario: usuario_cliente | Operación: Paciente creado correctamente
+Fecha: 2026-07-17 12:53:59.617935 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 12:54:19.562638 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 13:42:15.829765 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 13:42:26.401412 | Usuario: usuario_cliente | Operación: Intento de eliminación de paciente no encontrado
+Fecha: 2026-07-17 13:42:33.757714 | Usuario: usuario_cliente | Operación: Paciente eliminado correctamente
+Fecha: 2026-07-17 14:21:31.388049 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 11
+Fecha: 2026-07-17 14:21:38.896193 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente. ID: 11
+Fecha: 2026-07-17 14:22:05.781422 | Usuario: usuario_cliente | Operación: Paciente modificado correctamente. ID: 11
+Fecha: 2026-07-17 14:22:20.885602 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 14:23:11.247478 | Usuario: usuario_cliente | Operación: Intento de eliminación de paciente no encontrado
+Fecha: 2026-07-17 14:23:29.005693 | Usuario: usuario_cliente | Operación: Paciente eliminado correctamente
+Fecha: 2026-07-17 14:23:32.620406 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 16:11:06.070796 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 16:11:25.561416 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 12
+Fecha: 2026-07-17 16:11:53.220651 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 13
+Fecha: 2026-07-17 16:15:42.736176 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 14
+Fecha: 2026-07-17 16:15:47.718845 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente. ID: 1
+Fecha: 2026-07-17 16:15:52.580329 | Usuario: usuario_cliente | Operación: Intento de búsqueda de paciente no encontrado. ID: 2
+Fecha: 2026-07-17 16:19:58.974236 | Usuario: usuario_cliente | Operación: Paciente modificado correctamente. ID: 14
+Fecha: 2026-07-17 16:20:14.216831 | Usuario: usuario_cliente | Operación: Intento de eliminación de paciente no encontrado
+Fecha: 2026-07-17 16:20:20.941499 | Usuario: usuario_cliente | Operación: Paciente eliminado correctamente
+Fecha: 2026-07-17 16:20:29.770046 | Usuario: usuario_cliente | Operación: Médicos listados correctamente
+Fecha: 2026-07-17 16:21:06.199249 | Usuario: usuario_cliente | Operación: Médico creado correctamente. ID: 7
+Fecha: 2026-07-17 16:21:12.524859 | Usuario: usuario_cliente | Operación: Médico encontrado correctamente. ID: 7
+Fecha: 2026-07-17 16:21:18.180731 | Usuario: usuario_cliente | Operación: Médico no encontrado. ID: 222
+Fecha: 2026-07-17 16:21:49.624353 | Usuario: usuario_cliente | Operación: Médico modificado correctamente. ID: 7
+Fecha: 2026-07-17 16:22:09.207144 | Usuario: usuario_cliente | Operación: Médico eliminado correctamente. ID: 7
+Fecha: 2026-07-17 16:23:12.712791 | Usuario: usuario_cliente | Operación: Internación creada correctamente. ID: 4
+Fecha: 2026-07-17 16:23:18.067788 | Usuario: usuario_cliente | Operación: Error al listar internaciones.Internal Server Error
+Fecha: 2026-07-17 16:36:15.962689 | Usuario: usuario_cliente | Operación: Error al listar internaciones.Internal Server Error
+Fecha: 2026-07-17 16:38:41.594472 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente
+Fecha: 2026-07-17 16:45:46.659474 | Usuario: usuario_cliente | Operación: Error al crear internación: {"detail":[{"type":"greater_than","loc":["body","habitacion"],"msg":"Input should be greater than 0","input":0,"ctx":{"gt":0}}]}
+Fecha: 2026-07-17 16:55:19.214541 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 17:06:31.205507 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 15
+Fecha: 2026-07-17 17:07:23.707467 | Usuario: usuario_cliente | Operación: Error al modificar paciente. ID: 15
+Fecha: 2026-07-17 17:33:32.699981 | Usuario: usuario_cliente | Operación: Error al crear paciente: {"detail":[{"type":"value_error","loc":["body","nombre"],"msg":"Value error, El campo no puede estar vacio","input":"","ctx":{"error":{}}},{"type":"greater_than","loc":["body","edad"],"msg":"Input should be greater than 0","input":0,"ctx":{"gt":0}}]}
+Fecha: 2026-07-17 17:53:14.778876 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 17:53:39.876600 | Usuario: usuario_cliente | Operación: Error al modificar paciente. ID: 15
+Fecha: 2026-07-17 18:33:39.094489 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 18:33:50.253675 | Usuario: usuario_cliente | Operación: Paciente encontrado correctamente. ID: 3
+Fecha: 2026-07-17 18:34:11.870584 | Usuario: usuario_cliente | Operación: Paciente modificado correctamente. ID: 15
+Fecha: 2026-07-17 18:48:46.508988 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 18:49:04.892698 | Usuario: usuario_cliente | Operación: Paciente creado correctamente. ID: 16
+Fecha: 2026-07-17 18:49:28.361614 | Usuario: usuario_cliente | Operación: Paciente modificado correctamente. ID: 16
+Fecha: 2026-07-17 18:49:36.881952 | Usuario: usuario_cliente | Operación: Intento de eliminación de paciente no encontrado
+Fecha: 2026-07-17 18:49:39.976307 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 18:49:47.064231 | Usuario: usuario_cliente | Operación: Paciente eliminado correctamente
+Fecha: 2026-07-17 18:49:49.318613 | Usuario: usuario_cliente | Operación: Pacientes listados correctamente
+Fecha: 2026-07-17 18:49:57.675136 | Usuario: usuario_cliente | Operación: Error al listar médicos: Internal Server Error
+Fecha: 2026-07-17 18:53:46.095464 | Usuario: usuario_cliente | Operación: Médicos listados correctamente
+Fecha: 2026-07-17 18:54:11.482753 | Usuario: usuario_cliente | Operación: Médico creado correctamente. ID: 8
+Fecha: 2026-07-17 18:54:18.792348 | Usuario: usuario_cliente | Operación: Médico encontrado correctamente. ID: 8
+Fecha: 2026-07-17 18:54:32.702432 | Usuario: usuario_cliente | Operación: Médico eliminado correctamente. ID: 8
+Fecha: 2026-07-17 18:54:35.067683 | Usuario: usuario_cliente | Operación: Médicos listados correctamente
+Fecha: 2026-07-17 18:54:46.618236 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente
+Fecha: 2026-07-17 18:54:54.730750 | Usuario: usuario_cliente | Operación: Internación no encontrada. ID: 4
+Fecha: 2026-07-17 18:55:02.737547 | Usuario: usuario_cliente | Operación: Internación no encontrada. ID: 5
+Fecha: 2026-07-17 19:07:06.151670 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente
+Fecha: 2026-07-17 19:07:12.108735 | Usuario: usuario_cliente | Operación: Internación no encontrada. ID: 55
+Fecha: 2026-07-17 19:07:18.862398 | Usuario: usuario_cliente | Operación: Internación no encontrada. ID: 12
+Fecha: 2026-07-17 19:07:21.205772 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente
+Fecha: 2026-07-17 19:07:30.640678 | Usuario: usuario_cliente | Operación: Internación no encontrada. ID: 13
+Fecha: 2026-07-17 19:07:36.276947 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente
+Fecha: 2026-07-17 19:07:44.768787 | Usuario: usuario_cliente | Operación: Internación encontrada correctamente. ID: 4
+Fecha: 2026-07-17 19:07:59.870215 | Usuario: usuario_cliente | Operación: Intento de eliminación de internación no encontrada. ID: 6
+Fecha: 2026-07-17 19:08:08.683767 | Usuario: usuario_cliente | Operación: Internación eliminada correctamente. ID: 4
+Fecha: 2026-07-17 19:08:11.484237 | Usuario: usuario_cliente | Operación: Internaciones listadas correctamente

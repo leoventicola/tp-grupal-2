@@ -88,5 +88,75 @@
         "obra_social": "prog",
         "id": 9,
         "eliminado": true
+    },
+    {
+        "dni": "42078636",
+        "nombre": "gus",
+        "apellido": "martinez",
+        "edad": 27,
+        "telefono": "23454364",
+        "obra_social": "prg",
+        "id": 10,
+        "eliminado": true
+    },
+    {
+        "dni": "42078636",
+        "nombre": "gus",
+        "apellido": "dev",
+        "edad": 32,
+        "telefono": "24432724398",
+        "obra_social": "prg",
+        "id": 11,
+        "eliminado": true
+    },
+    {
+        "dni": "42078363",
+        "nombre": "gus",
+        "apellido": "dev",
+        "edad": 33,
+        "telefono": "324456464",
+        "obra_social": "prg",
+        "id": 12,
+        "eliminado": false
+    },
+    {
+        "dni": "5632934",
+        "nombre": "robert",
+        "apellido": "mali",
+        "edad": 21,
+        "telefono": "67384532",
+        "obra_social": "ast",
+        "id": 13,
+        "eliminado": false
+    },
+    {
+        "dni": "42348723",
+        "nombre": "holi",
+        "apellido": "chau",
+        "edad": 34,
+        "telefono": "342875342",
+        "obra_social": "yui",
+        "id": 14,
+        "eliminado": true
+    },
+    {
+        "dni": "2343235",
+        "nombre": "gus",
+        "apellido": "mart",
+        "edad": 33,
+        "telefono": "32425⅚4563",
+        "obra_social": "prg",
+        "id": 15,
+        "eliminado": false
+    },
+    {
+        "dni": "2345453546",
+        "nombre": "thor",
+        "apellido": "americo",
+        "edad": 44,
+        "telefono": "2342445",
+        "obra_social": "prg",
+        "id": 16,
+        "eliminado": true
     }
 ]

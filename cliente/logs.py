@@ -1,8 +1,6 @@
 from datetime import datetime
 
-
 USUARIO = "usuario_cliente"
-
 
 def registrar_log(operacion):
     try:

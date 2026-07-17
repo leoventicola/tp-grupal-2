@@ -1,44 +1,50 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class PacienteBase(BaseModel):
     dni           : str
-    nombre        : str
-    apellido      : str
+    nombre        : str 
+    apellido      : str 
     edad          : int = Field(gt=0)
     telefono      : str
     obra_social   : str
 
+
+    @field_validator("nombre","apellido")
+    @classmethod
+    def validar(cls,valor):
+        if not valor.strip():
+            raise ValueError("El campo no puede estar vacio")
+        return valor.strip()
+
 class PacienteCreate(PacienteBase):
     pass
 
-class PacienteUpdate(BaseModel):
-    dni           : str | None = None
-    nombre        : str | None = None
-    apellido      : str | None = None
-    edad          : int | None = Field(default=None, gt=0)
-    telefono      : str | None = None
-    obra_social   : str | None = None
+class PacienteUpdate(PacienteBase):
+    pass
 
 class PacienteResponse(PacienteBase):
     id            : int
 
 class MedicoBase(BaseModel):
-    matricula     : str = Field(min_length=1)
-    nombre        : str = Field(min_length=1)
-    apellido      : str = Field(min_length=1)
-    especialidad  : str = Field(min_length=1)
+    matricula     : str 
+    nombre        : str
+    apellido      : str 
+    especialidad  : str 
     telefono      : str
+
+    @field_validator("matricula","especialidad")
+    @classmethod
+    def validar(cls,valor):
+        if not valor.strip():
+            raise ValueError("El campo no puede estar vacio")
+        return valor.strip()
 
 class MedicoCreate(MedicoBase):
     pass
 
 class MedicoUpdate(BaseModel):
-    matricula     : str | None = Field(default=None, min_length=1)
-    nombre        : str | None = Field(default=None, min_length=1)
-    apellido      : str | None = Field(default=None, min_length=1)
-    especialidad  : str | None = Field(default=None, min_length=1)
-    telefono      : str | None = None
+    pass
 
 class MedicoResponse(MedicoBase):
     id            : int

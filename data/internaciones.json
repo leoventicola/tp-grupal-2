@@ -4,7 +4,7 @@
         "medico_id": 3,
         "fecha_ingreso": "hoy",
         "diagnostico": "Enfermo",
-        "habitacion": "1A",
+        "habitacion": 7,
         "estado": "enfermo",
         "id": 1,
         "eliminado": false
@@ -14,7 +14,7 @@
         "medico_id": 3,
         "fecha_ingreso": "2026-07-13T19:02:23.639Z",
         "diagnostico": "Enfermo",
-        "habitacion": "7A",
+        "habitacion": 67,
         "estado": "enfermo",
         "id": 2,
         "eliminado": false
@@ -24,9 +24,19 @@
         "medico_id": 4,
         "fecha_ingreso": "33/7",
         "diagnostico": "nada",
-        "habitacion": "0",
+        "habitacion": 22234,
         "estado": "de10",
         "id": 3,
         "eliminado": false
+    },
+    {
+        "paciente_id": 13,
+        "medico_id": 3,
+        "fecha_ingreso": "12/45",
+        "diagnostico": "cataratas",
+        "habitacion": 3022,
+        "estado": "normal",
+        "id": 4,
+        "eliminado": true
     }
 ]

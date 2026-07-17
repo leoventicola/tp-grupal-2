@@ -58,6 +58,15 @@ def delete(id : int):
             return True
     return False 
 
+def get(id: int):
+    internaciones = repoInternacion.get_all()
+
+    for item in internaciones:
+        if item["id"] == id and not item["eliminado"]:
+            return item
+
+    return None
+
 def validPaciente(id):
     pacientes = repoPaciente.get_all()
     for item in pacientes:
